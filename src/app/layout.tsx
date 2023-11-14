@@ -1,22 +1,25 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Epilogue } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const epilogue = Epilogue({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
 
 export const metadata: Metadata = {
-  title: 'Instasany',
-  description: 'Projeto criado para me familiarizar com Next.js',
-}
+  title: "Instasany",
+  description: "Projeto criado para me familiarizar com Next.js",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={epilogue.className}>{children}</body>
     </html>
-  )
+  );
 }
