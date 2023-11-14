@@ -4,15 +4,16 @@ import Link from "next/link";
 import LogoImg from "/public/logo.svg";
 import SearchIcon from "/public/icon-search.svg";
 import IconUser from "/public/icon-user.svg";
+import { GridContainer } from "./grid";
 
 export function Header() {
   return (
     // HEADER
     <header className="relative w-full h-24 bg-green-primary flex items-center">
-      <div>
+      <GridContainer className="flex items-center justify-between">
         {/* LOGO */}
         <Image src={LogoImg} alt="logo" />
-        <div>
+        <div className="flex items-center gap-20">
           {/* NAV LINKS */}
           <nav>
             <Link href="#">Início</Link>
@@ -34,7 +35,7 @@ export function Header() {
             </button>
           </div>
         </div>
-      </div>
+      </GridContainer>
     </header>
   );
 }
