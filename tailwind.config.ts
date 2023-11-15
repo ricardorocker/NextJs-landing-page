@@ -13,6 +13,7 @@ const config: Config = {
         "green-actived": "#5D8A83",
         "green-border": "#2A4B46",
         "green-btn": "#CCEC60",
+        "green-title-card": "#719D96",
       },
       maxWidth: {
         // 1240px
@@ -22,11 +23,15 @@ const config: Config = {
         // 855px
         'area-icons': '53.4375rem',
         // 957px
-        'area-mockups': '59.8125rem'
+        'area-mockups': '59.8125rem',
+        // 1320px
+        'area-cards': '82.5rem',
       },
       height: {
         // 874px
         "section-hero": "54.625rem",
+        // 562px
+        'area-cards': '35.1rem',
       },
       backgroundImage: {
         'hero': "url(/bg-hero.svg)"
