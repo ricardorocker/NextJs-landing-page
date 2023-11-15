@@ -7,6 +7,14 @@ import IconUser from "/public/icon-user.svg";
 import { GridContainer } from "./grid";
 
 export function Header() {
+  const arrayMenu = [
+    "Início",
+    "Benefícios",
+    "Para quem é o curso?",
+    "Preços promocionais",
+    "Sobre nós",
+  ];
+
   return (
     // HEADER
     <header className="relative w-full h-24 bg-green-primary flex items-center">
@@ -16,11 +24,15 @@ export function Header() {
         <div className="flex items-center gap-20">
           {/* NAV LINKS */}
           <nav>
-            <Link href="#">Início</Link>
-            <Link href="#">Benefícios</Link>
-            <Link href="#">Para quem é o curso?</Link>
-            <Link href="#">Preços promocionais</Link>
-            <Link href="#">Sobre nós</Link>
+            {arrayMenu.map((item, index) => (
+              <Link
+                key={index}
+                href="#"
+                className="px-3 py-1 text-white text-opacity-40"
+              >
+                {item}
+              </Link>
+            ))}
           </nav>
           {/* RIGHT BUTTONS */}
           <div>
